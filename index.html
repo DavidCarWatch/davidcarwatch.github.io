@@ -54,12 +54,12 @@ Users familiar with the display can switch off the minutes digits to make it har
           
           <label class='item' id='minutes_color_label'>
               Minutes Color
-              <input id='minutes_color_picker' type='text' class='item-color item-color-sunny' value='#000000'>
+              <input id='minutes_color_picker' type='text' class='item-color item-color-sunny' value='#FFFFFF'>
                   </label>
           
           <label class='item'>
               Hours Color
-              <input id='hours_color_picker' type='text' class='item-color item-color-sunny' value='#000000'>
+              <input id='hours_color_picker' type='text' class='item-color item-color-sunny' value='#FFFFFF'>
                   </label>
           
           <label class='item' id='background_color_label'>
@@ -69,7 +69,7 @@ Users familiar with the display can switch off the minutes digits to make it har
           
           <label class='item'>
               Checker Color
-              <input id='checker_color_picker' type='text' class='item-color item-color-sunny' value='#000000'>
+              <input id='checker_color_picker' type='text' class='item-color item-color-sunny' value='#555555'>
                   </label>
           
           <label class='item'>
@@ -136,10 +136,10 @@ Users familiar with the display can switch off the minutes digits to make it har
                                         minutes_off_switch.checked = true;
                                         invert_hours_switch.checked = true;
                                         
-                                        minutes_ColorPicker.value = '#FF00FF';
-                                        hours_ColorPicker.value = '#FF00FF';
-                                        background_ColorPicker.value = '#FF00FF';
-                                        checker_ColorPicker.value = '#FF00FF';
+                                        minutes_ColorPicker.value = '0xFFFFFF';
+                                        hours_ColorPicker.value = '0xFFFFFF';
+                                        background_ColorPicker.value = '0x000000';
+                                        checker_ColorPicker.value = '0x555555';
                                         
                                         $('.item-color').change();
                                         
@@ -160,10 +160,10 @@ Users familiar with the display can switch off the minutes digits to make it har
                                         minutes_off_switch.checked = false;
                                         invert_hours_switch.checked = false;
                                         
-                                        minutes_ColorPicker.value = '#00FF00';
-                                        hours_ColorPicker.value = '#00FF00';
-                                        background_ColorPicker.value = '#00FF00';
-                                        checker_ColorPicker.value = '#00FF00';
+                                        minutes_ColorPicker.value = '0x00FF00';
+                                        hours_ColorPicker.value = '0x00FF00';
+                                        background_ColorPicker.value = '0x00FF00';
+                                        checker_ColorPicker.value = '0x00FF00';
                                         
                                         $('.item-color').change();
 

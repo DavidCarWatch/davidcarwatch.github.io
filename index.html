@@ -60,12 +60,7 @@
               Hours Color
               <input id='hours_color_picker' type='text' class='item-color item-color-sunny' value='#FFFFFF'>
                   </label>
-          
-          //<label class='item' id='background_color_label'>
-          //    Backgound Color
-          //    <input id='background_color_picker' type='text' class='item-color item-color-sunny' value='#000000'>
-          //        </label>
-          
+                  
           <label class='item'>
               Checker Color
               <input id='checker_color_picker' type='text' class='item-color item-color-sunny' value='#555555'>
@@ -131,8 +126,8 @@
                                         //var background_ColorPicker = document.getElementById('background_color_picker');
                                         var checker_ColorPicker = document.getElementById('checker_color_picker');
 
-                                        minutes_off_switch.checked = true;
-                                        invert_hours_switch.checked = true;
+                                        minutes_off_switch.checked = false;
+                                        invert_hours_switch.checked = false;
                                         
                                         minutes_ColorPicker.value = '0xFFFFFF';
                                         hours_ColorPicker.value = '0xFFFFFF';
@@ -155,8 +150,8 @@
                                         //var background_ColorPicker = document.getElementById('background_color_picker');
                                         var checker_ColorPicker = document.getElementById('checker_color_picker');
                                         
-                                        minutes_off_switch.checked = false;
-                                        invert_hours_switch.checked = false;
+                                        minutes_off_switch.checked = true;
+                                        invert_hours_switch.checked = true;
                                         
                                         minutes_ColorPicker.value = '0x00FF00';
                                         hours_ColorPicker.value = '0x00FF00';

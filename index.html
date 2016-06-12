@@ -23,7 +23,7 @@
     <div class='item-container'>
       <div class='item-container-content'>
         <div class='item'>
-          Use this configuration page to choose the settings for the MinutesSquared Watchface.  Click the Save button to save the settings.
+          Click "Save" to save the settings.
         </div>
       </div>
     </div>
@@ -44,7 +44,6 @@
         
     </div>
     <div class='item-container-footer'>
-Users familiar with the display can switch off the minutes digits to make it harder to read. Inverting the hours digits simplifies the display, but makes the minutes harder to notice from a distance.
     </div>
 </div>
 
@@ -62,10 +61,10 @@ Users familiar with the display can switch off the minutes digits to make it har
               <input id='hours_color_picker' type='text' class='item-color item-color-sunny' value='#FFFFFF'>
                   </label>
           
-          <label class='item' id='background_color_label'>
-              Backgound Color
-              <input id='background_color_picker' type='text' class='item-color item-color-sunny' value='#000000'>
-                  </label>
+          //<label class='item' id='background_color_label'>
+          //    Backgound Color
+          //    <input id='background_color_picker' type='text' class='item-color item-color-sunny' value='#000000'>
+          //        </label>
           
           <label class='item'>
               Checker Color
@@ -86,7 +85,6 @@ Users familiar with the display can switch off the minutes digits to make it har
 
       </div>
       <div class='item-container-footer'>
-        The minutes color should be the brightest, followed by the hours color.  The background color should be darkest, and the checker color should be close to the background color. The buttons will reset all the colors to sample combinations.
       </div>
     </div>
 
@@ -106,7 +104,7 @@ Users familiar with the display can switch off the minutes digits to make it har
        
        var minutes_ColorPicker = document.getElementById('minutes_color_picker');
        var hours_ColorPicker = document.getElementById('hours_color_picker');
-       var background_ColorPicker = document.getElementById('background_color_picker');
+       //var background_ColorPicker = document.getElementById('background_color_picker');
        var checker_ColorPicker = document.getElementById('checker_color_picker');
 
        // Load any previously saved configuration, if available
@@ -116,7 +114,7 @@ Users familiar with the display can switch off the minutes digits to make it har
        
        minutes_ColorPicker.value = localStorage['minutes_color'];
        hours_ColorPicker.value = localStorage['hours_color'];
-       background_ColorPicker.value = localStorage['background_color'];
+       //background_ColorPicker.value = localStorage['background_color'];
        checker_ColorPicker.value = localStorage['checker_color'];
        }
        })();
@@ -130,7 +128,7 @@ Users familiar with the display can switch off the minutes digits to make it har
                                         var invert_hours_switch = document.getElementById('invert_hours_checkbox');
                                         var minutes_ColorPicker = document.getElementById('minutes_color_picker');
                                         var hours_ColorPicker = document.getElementById('hours_color_picker');
-                                        var background_ColorPicker = document.getElementById('background_color_picker');
+                                        //var background_ColorPicker = document.getElementById('background_color_picker');
                                         var checker_ColorPicker = document.getElementById('checker_color_picker');
 
                                         minutes_off_switch.checked = true;
@@ -138,7 +136,7 @@ Users familiar with the display can switch off the minutes digits to make it har
                                         
                                         minutes_ColorPicker.value = '0xFFFFFF';
                                         hours_ColorPicker.value = '0xFFFFFF';
-                                        background_ColorPicker.value = '0x000000';
+                                        //background_ColorPicker.value = '0x000000';
                                         checker_ColorPicker.value = '0x555555';
                                         
                                         $('.item-color').change();
@@ -154,7 +152,7 @@ Users familiar with the display can switch off the minutes digits to make it har
                                         var invert_hours_switch = document.getElementById('invert_hours_checkbox');
                                         var minutes_ColorPicker = document.getElementById('minutes_color_picker');
                                         var hours_ColorPicker = document.getElementById('hours_color_picker');
-                                        var background_ColorPicker = document.getElementById('background_color_picker');
+                                        //var background_ColorPicker = document.getElementById('background_color_picker');
                                         var checker_ColorPicker = document.getElementById('checker_color_picker');
                                         
                                         minutes_off_switch.checked = false;
@@ -162,7 +160,7 @@ Users familiar with the display can switch off the minutes digits to make it har
                                         
                                         minutes_ColorPicker.value = '0x00FF00';
                                         hours_ColorPicker.value = '0x00FF00';
-                                        background_ColorPicker.value = '0x00FF00';
+                                        //background_ColorPicker.value = '0x00FF00';
                                         checker_ColorPicker.value = '0x00FF00';
                                         
                                         $('.item-color').change();
@@ -175,7 +173,7 @@ Users familiar with the display can switch off the minutes digits to make it har
       var invert_hours_switch = document.getElementById('invert_hours_checkbox');
       var minutes_ColorPicker = document.getElementById('minutes_color_picker');
       var hours_ColorPicker = document.getElementById('hours_color_picker');
-      var background_ColorPicker = document.getElementById('background_color_picker');
+      //var background_ColorPicker = document.getElementById('background_color_picker');
       var checker_ColorPicker = document.getElementById('checker_color_picker');
       
     var options = {
@@ -184,7 +182,7 @@ Users familiar with the display can switch off the minutes digits to make it har
 
         'minutes_color': minutes_ColorPicker.value,
         'hours_color': hours_ColorPicker.value,
-        'background_color': background_ColorPicker.value,
+        //'background_color': background_ColorPicker.value,
         'checker_color': checker_ColorPicker.value
     };
 
@@ -193,7 +191,7 @@ Users familiar with the display can switch off the minutes digits to make it har
     localStorage['invert_hours'] = options['invert_hours'];
     localStorage['minutes_color'] = options['minutes_color'];
     localStorage['hours_color'] = options['hours_color'];
-    localStorage['background_color'] = options['background_color'];
+    //localStorage['background_color'] = options['background_color'];
     localStorage['checker_color'] = options['checker_color'];
 
     console.log('Got options: ' + JSON.stringify(options));

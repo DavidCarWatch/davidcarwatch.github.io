@@ -167,11 +167,12 @@ colors_Button_2.addEventListener('click',
      var btx_selector = document.getElementById('btx_selector');
      
      var btx_selector_int = 0;
-     if (btx_selector === 'Dots') {
+     if (btx_selector.value === 'Dots') {
          btx_selector_int = 1;
-     } else if (btx_selector === 'Squares') {
+     } else if (btx_selector.value === 'Squares') {
          btx_selector_int = 2;
      }
+
      var options = {
          'minutes_off': minutes_off_switch.checked,
          'invert_hours': invert_hours_switch.checked,

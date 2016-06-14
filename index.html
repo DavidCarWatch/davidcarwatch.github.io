@@ -44,10 +44,10 @@
         
         <label class="item">
             Background Texture
-            <select name="select-1" dir='rtl' class="item-select">
+            <select id='btx_selector' name="select-1" dir='rtl' class="item-select">
                 <option class="item-select-option">None</option>
-                <option class="item-select-option" selected>1</option>
-                <option class="item-select-option">2</option>
+                <option class="item-select-option" selected>Dots</option>
+                <option class="item-select-option">Squares</option>
             </select>
         </label>
         
@@ -71,11 +71,6 @@
                   </label>
                   
           <label class='item'>
-              Checker Color
-              <input id='checker_color_picker' type='text' class='item-color item-color-sunny' value='#555555'>
-                  </label>
-          
-          <label class='item'>
               <div class='button-container'>
                   <input id='sample_colors_button_1' type='button' class='item-button' value='Set Sample Colors 1'>
                       </div>
@@ -91,8 +86,7 @@
       <div class='item-container-footer'>
       </div>
     </div>
-
-
+    
     <div class='item-container'>
       <div class='button-container'>
         <input id='submit_button' type='button' class='item-button' value='SAVE'>
@@ -106,10 +100,10 @@
        var minutes_off_switch = document.getElementById('minutes_off_checkbox');
        var invert_hours_switch = document.getElementById('invert_hours_checkbox');
        
+       var btx_selector = document.getElementById('btx_selector');
+
        var minutes_ColorPicker = document.getElementById('minutes_color_picker');
        var hours_ColorPicker = document.getElementById('hours_color_picker');
-       //var background_ColorPicker = document.getElementById('background_color_picker');
-       var checker_ColorPicker = document.getElementById('checker_color_picker');
 
        // Load any previously saved configuration, if available
        if(localStorage['minutes_off']) {
@@ -118,8 +112,6 @@
        
        minutes_ColorPicker.value = localStorage['minutes_color'];
        hours_ColorPicker.value = localStorage['hours_color'];
-       //background_ColorPicker.value = localStorage['background_color'];
-       checker_ColorPicker.value = localStorage['checker_color'];
        }
        })();
 
@@ -132,17 +124,12 @@
                                         var invert_hours_switch = document.getElementById('invert_hours_checkbox');
                                         var minutes_ColorPicker = document.getElementById('minutes_color_picker');
                                         var hours_ColorPicker = document.getElementById('hours_color_picker');
-                                        //var background_ColorPicker = document.getElementById('background_color_picker');
-                                        var checker_ColorPicker = document.getElementById('checker_color_picker');
 
                                         minutes_off_switch.checked = false;
                                         invert_hours_switch.checked = false;
-                                        
                                         minutes_ColorPicker.value = '0xFFFFFF';
                                         hours_ColorPicker.value = '0xFFFFFF';
-                                        //background_ColorPicker.value = '0x000000';
-                                        checker_ColorPicker.value = '0x555555';
-                                        
+
                                         $('.item-color').change();
                                         
                                         });
@@ -156,17 +143,13 @@
                                         var invert_hours_switch = document.getElementById('invert_hours_checkbox');
                                         var minutes_ColorPicker = document.getElementById('minutes_color_picker');
                                         var hours_ColorPicker = document.getElementById('hours_color_picker');
-                                        //var background_ColorPicker = document.getElementById('background_color_picker');
-                                        var checker_ColorPicker = document.getElementById('checker_color_picker');
-                                        
+
                                         minutes_off_switch.checked = true;
                                         invert_hours_switch.checked = true;
                                         
                                         minutes_ColorPicker.value = '0x00FF00';
                                         hours_ColorPicker.value = '0x00FF00';
-                                        //background_ColorPicker.value = '0x00FF00';
-                                        checker_ColorPicker.value = '0x00FF00';
-                                        
+
                                         $('.item-color').change();
 
                                         });
@@ -177,17 +160,13 @@
       var invert_hours_switch = document.getElementById('invert_hours_checkbox');
       var minutes_ColorPicker = document.getElementById('minutes_color_picker');
       var hours_ColorPicker = document.getElementById('hours_color_picker');
-      //var background_ColorPicker = document.getElementById('background_color_picker');
-      var checker_ColorPicker = document.getElementById('checker_color_picker');
-      
+
     var options = {
         'minutes_off': minutes_off_switch.checked,
         'invert_hours': invert_hours_switch.checked,
 
         'minutes_color': minutes_ColorPicker.value,
         'hours_color': hours_ColorPicker.value,
-        //'background_color': background_ColorPicker.value,
-        'checker_color': checker_ColorPicker.value
     };
 
     // Save for next launch
@@ -195,8 +174,6 @@
     localStorage['invert_hours'] = options['invert_hours'];
     localStorage['minutes_color'] = options['minutes_color'];
     localStorage['hours_color'] = options['hours_color'];
-    //localStorage['background_color'] = options['background_color'];
-    localStorage['checker_color'] = options['checker_color'];
 
     console.log('Got options: ' + JSON.stringify(options));
     return options;

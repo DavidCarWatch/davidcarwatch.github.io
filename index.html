@@ -1,215 +1,219 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <title>MinutesSquared Pebble Watchface Configuration</title>
-  <link rel='stylesheet' type='text/css' href='css/slate.min.css'>
-  <script src='js/slate.min.js'></script>
-  <style>
-  .title {
-    padding: 15px 10px;
-    text-transform: uppercase;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 1.2em;
-    font-weight: 500;
-    color: #888888;
-    text-align: center;
-  }
-  </style>
-  </head>
-
-  <body>
-    <h1 class='title'>Watchface Options</h1>
-
-    <div class='item-container'>
-      <div class='item-container-content'>
-        <div class='item'>
-          Click "Save" to save the settings.
-        </div>
-      </div>
-    </div>
-
-<div class='item-container'>
-    <div class='item-container-header'>General Display Options</div>
-    <div class='item-container-content'>
-        
-        <label class='item'>
-            Switch Off Minutes Digits
-            <input id='minutes_off_checkbox' type='checkbox' class='item-toggle'>
-        </label>
-        
-        <label class='item'>
-            Invert Hours Digits
-            <input id='invert_hours_checkbox' type='checkbox' class='item-toggle'>
-        </label>
-        
-        <label class="item">
-      Example Item
-      <select id='btx_selector' name="select-1" dir='rtl' class="item-select">
-        <option class="item-select-option">Both</option>
-        <option class="item-select-option" selected>Major only</option>
-        <option class="item-select-option">Minor only</option>
-      </select>
-    </label>
-         
-    </div>
-    <div class='item-container-footer'>
-    </div>
-</div>
-
-    <div class='item-container'>
-      <div class='item-container-header'>Color Options for Color Watches</div>
-      <div class='item-container-content' >
-          
-          <label class='item' id='minutes_color_label'>
-              Minutes Color
-              <input id='minutes_color_picker' type='text' class='item-color item-color-normal' value='#FFFFFF'>
-                  </label>
-          
-          <label class='item'>
-              Hours Color
-              <input id='hours_color_picker' type='text' class='item-color item-color-normal' value='#FFFFFF'>
-                  </label>
-                  
-          <label class='item'>
-              <div class='button-container'>
-                  <input id='sample_colors_button_1' type='button' class='item-button' value='Set Sample Colors 1'>
-                      </div>
-          </label>
-          
-          <label class='item'>
-              <div class='button-container'>
-                  <input id='sample_colors_button_2' type='button' class='item-button' value='Set Sample Colors 2'>
-                      </div>
-          </label>
-
-      </div>
-      <div class='item-container-footer'>
-      </div>
-    </div>
+    <head>
+        <title>Configuration Test Index Copy</title>
+        <link rel='stylesheet' type='text/css' href='css/slate.min.css'>
+            <script src='js/slate.min.js'></script>
+            <style>
+                .title {
+                    padding: 15px 10px;
+                    text-transform: uppercase;
+                    font-family: 'PT Sans', sans-serif;
+                    font-size: 1.2em;
+                    font-weight: 500;
+                    color: #888888;
+                    text-align: center;
+                }
+            </style>
+            </head>
     
-    <div class='item-container'>
-      <div class='button-container'>
-        <input id='submit_button' type='button' class='item-button' value='SAVE'>
-      </div>
-    </div>
-  </body>
-  
-  <script>
-      
-      (function() {
-       var minutes_off_switch = document.getElementById('minutes_off_checkbox');
-       var invert_hours_switch = document.getElementById('invert_hours_checkbox');
-       var minutes_ColorPicker = document.getElementById('minutes_color_picker');
-       var hours_ColorPicker = document.getElementById('hours_color_picker');
-       var btx_selector = document.getElementById('btx_selector');
-       
-       // Load any previously saved configuration, if available
-       if(localStorage['minutes_off']) {
-       minutes_off_switch.checked = JSON.parse(localStorage['minutes_off']);
-       invert_hours_switch.checked = JSON.parse(localStorage['invert_hours']);
-       minutes_ColorPicker.value = localStorage['minutes_color'];
-       hours_ColorPicker.value = localStorage['hours_color'];
-       // btx_selector.value = localStorage['btx_selector'];
-       }
-       })();
+    <body>
+        <h1 class='title'>Watchface Options</h1>
+        
+        <div class='item-container'>
+            <div class='item-container-content'>
+                <div class='item'>
+                    Click "Save" to save the settings.
+                </div>
+            </div>
+        </div>
+        
+        <div class='item-container'>
+            <div class='item-container-header'>General Display Options</div>
+            <div class='item-container-content'>
+                
+                <label class='item'>
+                    Switch Off Minutes Digits
+                    <input id='minutes_off_checkbox' type='checkbox' class='item-toggle'>
+                        </label>
+                
+                <label class='item'>
+                    Invert Hours Digits
+                    <input id='invert_hours_checkbox' type='checkbox' class='item-toggle'>
+                        </label>
+                
+                <label class="item">
+                    Background Pattern
+                    <select id='btx_selector' name="select-1" dir='rtl' class="item-select">
+                        <option class="item-select-option">None</option>
+                        <option class="item-select-option" selected>Dots</option>
+                        <option class="item-select-option">Squares</option>
+                    </select>
+                </label>
+                
+            </div>
+            <div class='item-container-footer'>
+            </div>
+        </div>
+        
+        <div class='item-container'>
+            <div class='item-container-header'>Color Options for Color Watches</div>
+            <div class='item-container-content' >
+                
+                <label class='item' id='minutes_color_label'>
+                    Minutes Color
+                    <input id='minutes_color_picker' type='text' class='item-color item-color-normal' value='#FFFFFF'>
+                        </label>
+                
+                <label class='item'>
+                    Hours Color
+                    <input id='hours_color_picker' type='text' class='item-color item-color-normal' value='#FFFFFF'>
+                        </label>
+                
+                <label class='item'>
+                    <div class='button-container'>
+                        <input id='sample_colors_button_1' type='button' class='item-button' value='Set Sample Colors 1'>
+                            </div>
+                </label>
+                
+                <label class='item'>
+                    <div class='button-container'>
+                        <input id='sample_colors_button_2' type='button' class='item-button' value='Set Sample Colors 2'>
+                            </div>
+                </label>
+                
+            </div>
+            <div class='item-container-footer'>
+            </div>
+        </div>
+        
+        <div class='item-container'>
+            <div class='button-container'>
+                <input id='submit_button' type='button' class='item-button' value='SAVE'>
+                    </div>
+        </div>
+    </body>
+    
+    <script>
+        
+        (function() {
+         var minutes_off_switch = document.getElementById('minutes_off_checkbox');
+         var invert_hours_switch = document.getElementById('invert_hours_checkbox');
+         var minutes_ColorPicker = document.getElementById('minutes_color_picker');
+         var hours_ColorPicker = document.getElementById('hours_color_picker');
+         var btx_selector = document.getElementById('btx_selector');
+         
+         // Load any previously saved configuration, if available
+         if(localStorage['minutes_off']) {
+         minutes_off_switch.checked = JSON.parse(localStorage['minutes_off']);
+         invert_hours_switch.checked = JSON.parse(localStorage['invert_hours']);
+         minutes_ColorPicker.value = localStorage['minutes_color'];
+         hours_ColorPicker.value = localStorage['hours_color'];
+         // btx_selector.value = localStorage['btx_selector'];
+         }
+         })();
+         
+         var colors_Button_1 = document.getElementById('sample_colors_button_1');
+         colors_Button_1.addEventListener('click',
+                                          function() {
+                                          console.log('clicked Set Sample Colors 1');
+                                          
+                                          var minutes_off_switch = document.getElementById('minutes_off_checkbox');
+                                          var invert_hours_switch = document.getElementById('invert_hours_checkbox');
+                                          var minutes_ColorPicker = document.getElementById('minutes_color_picker');
+                                          var hours_ColorPicker = document.getElementById('hours_color_picker');
+                                          var btx_selector = document.getElementById('btx_selector');
+                                          
+                                          minutes_off_switch.checked = false;
+                                          invert_hours_switch.checked = false;
+                                          minutes_ColorPicker.value = '0xFFFFFF';
+                                          hours_ColorPicker.value = '0xFFFFFF';
+                                          btx_selector.value = 'Dots';
+                                          
+                                          $('.item-color').change();
+                                          
+                                          });
+                                          
+// ----------------------------------------------------
 
-       var colors_Button_1 = document.getElementById('sample_colors_button_1');
-       colors_Button_1.addEventListener('click',
-                                        function() {
-                                        console.log('clicked Set Sample Colors 1');
-                                        
-                                        var minutes_off_switch = document.getElementById('minutes_off_checkbox');
-                                        var invert_hours_switch = document.getElementById('invert_hours_checkbox');
-                                        var minutes_ColorPicker = document.getElementById('minutes_color_picker');
-                                        var hours_ColorPicker = document.getElementById('hours_color_picker');
-                                        var btx_selector = document.getElementById('btx_selector');
+var colors_Button_2 = document.getElementById('sample_colors_button_2');
+colors_Button_2.addEventListener('click',
+                                 function() {
+                                 console.log('clicked Set Sample Colors 2');
+                                 
+                                 var minutes_off_switch = document.getElementById('minutes_off_checkbox');
+                                 var invert_hours_switch = document.getElementById('invert_hours_checkbox');
+                                 var minutes_ColorPicker = document.getElementById('minutes_color_picker');
+                                 var hours_ColorPicker = document.getElementById('hours_color_picker');
+                                 var btx_selector = document.getElementById('btx_selector');
+                                 
+                                 minutes_off_switch.checked = true;
+                                 invert_hours_switch.checked = true;
+                                 minutes_ColorPicker.value = '0x00FF00';
+                                 hours_ColorPicker.value = '0x00FF00';
+                                 btx_selector.value = 'None';
+                                 
+                                 $('.item-color').change();
+                                 
+                                 });
 
-                                        minutes_off_switch.checked = false;
-                                        invert_hours_switch.checked = false;
-                                        minutes_ColorPicker.value = '0xFFFFFF';
-                                        hours_ColorPicker.value = '0xFFFFFF';
-                                        btx_selector.value = 'Dots';
+// ----------------------------------------------------
 
-                                        $('.item-color').change();
-                                        
-                                        });
-                                        
-       var colors_Button_2 = document.getElementById('sample_colors_button_2');
-       colors_Button_2.addEventListener('click',
-                                        function() {
-                                        console.log('clicked Set Sample Colors 2');
-                                        
-                                        var minutes_off_switch = document.getElementById('minutes_off_checkbox');
-                                        var invert_hours_switch = document.getElementById('invert_hours_checkbox');
-                                        var minutes_ColorPicker = document.getElementById('minutes_color_picker');
-                                        var hours_ColorPicker = document.getElementById('hours_color_picker');
-                                        var btx_selector = document.getElementById('btx_selector');
-
-                                        minutes_off_switch.checked = true;
-                                        invert_hours_switch.checked = true;
-                                        minutes_ColorPicker.value = '0x00FF00';
-                                        hours_ColorPicker.value = '0x00FF00';
-                                        btx_selector.value = 'None';
-
-                                        $('.item-color').change();
-
-                                        });
-
-
-  function getConfigData() {
-      var minutes_off_switch = document.getElementById('minutes_off_checkbox');
-      var invert_hours_switch = document.getElementById('invert_hours_checkbox');
-      var minutes_ColorPicker = document.getElementById('minutes_color_picker');
-      var hours_ColorPicker = document.getElementById('hours_color_picker');
-      var btx_selector = document.getElementById('btx_selector');
-
-      var btx_selector_int = 0;
-      if (btx_selector === 'Dots') {
-        btx_selector_int = 1;
-      } else if (btx_selector =='Squares') {
-        btx_selector_int = 2;
-      }
-    var options = {
-        'minutes_off': minutes_off_switch.checked,
-        'invert_hours': invert_hours_switch.checked,
-        'minutes_color': minutes_ColorPicker.value,
-        'hours_color': hours_ColorPicker.value,
-        'btx_selector': btx_selector.value,
-        'btx_selector_int': btx_selector_int
-    };
-
-    // Save for next launch
-    localStorage['minutes_off'] = options['minutes_off'];
-    localStorage['invert_hours'] = options['invert_hours'];
-    localStorage['minutes_color'] = options['minutes_color'];
-    localStorage['hours_color'] = options['hours_color'];
-
-    console.log('Got options: ' + JSON.stringify(options));
-    return options;
-  }
-  
-  // ----------------------------------------------------
-
-  function getQueryParam(variable, defaultValue) {
-    var query = location.search.substring(1);
-    var vars = query.split('&');
-    for (var i = 0; i < vars.length; i++) {
-      var pair = vars[i].split('=');
-      if (pair[0] === variable) {
-        return decodeURIComponent(pair[1]);
-      }
+ function getConfigData() {
+     var minutes_off_switch = document.getElementById('minutes_off_checkbox');
+     var invert_hours_switch = document.getElementById('invert_hours_checkbox');
+     var minutes_ColorPicker = document.getElementById('minutes_color_picker');
+     var hours_ColorPicker = document.getElementById('hours_color_picker');
+     var btx_selector = document.getElementById('btx_selector');
+     
+     var btx_selector_int = 0;
+     if (btx_selector === 'Dots') {
+         btx_selector_int = 1;
+     } else if (btx_selector =='Squares') {
+         btx_selector_int = 2;
+     }
+     var options = {
+         'minutes_off': minutes_off_switch.checked,
+         'invert_hours': invert_hours_switch.checked,
+         'minutes_color': minutes_ColorPicker.value,
+         'hours_color': hours_ColorPicker.value,
+         'btx_selector': btx_selector.value,
+         'btx_selector_int': btx_selector_int
+     };
+     
+     // Save for next launch
+     localStorage['minutes_off'] = options['minutes_off'];
+     localStorage['invert_hours'] = options['invert_hours'];
+     localStorage['minutes_color'] = options['minutes_color'];
+     localStorage['hours_color'] = options['hours_color'];
+     
+     console.log('Got options: ' + JSON.stringify(options));
+     return options;
+ }
+    
+    // ----------------------------------------------------
+    
+    function getQueryParam(variable, defaultValue) {
+        var query = location.search.substring(1);
+        var vars = query.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+            if (pair[0] === variable) {
+                return decodeURIComponent(pair[1]);
+            }
+        }
+        return defaultValue || false;
     }
-    return defaultValue || false;
-  }
- 
-  var submitButton = document.getElementById('submit_button');
-  submitButton.addEventListener('click', function() {
-    console.log('Submit');
-
-    // Set the return URL depending on the runtime environment
-    var return_to = getQueryParam('return_to', 'pebblejs://close#');
-    document.location = return_to + encodeURIComponent(JSON.stringify(getConfigData()));
-  });
-  
-  </script>
+    
+    var submitButton = document.getElementById('submit_button');
+    submitButton.addEventListener('click', function() {
+                                  console.log('Submit');
+                                  
+                                  // Set the return URL depending on the runtime environment
+                                  var return_to = getQueryParam('return_to', 'pebblejs://close#');
+                                  document.location = return_to + encodeURIComponent(JSON.stringify(getConfigData()));
+                                  });
+                                  
+        </script>
 </html>
+

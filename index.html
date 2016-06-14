@@ -43,7 +43,7 @@
         </label>
         
         <label class="item">
-            Background Texture
+            Background Pattern
             <select id='btx_selector' name="select-1" dir='rtl' class="item-select">
                 <option class="item-select-option">None</option>
                 <option class="item-select-option" selected>Dots</option>
@@ -163,12 +163,19 @@
       var hours_ColorPicker = document.getElementById('hours_color_picker');
       var btx_selector = document.getElementById('btx_selector');
 
+      var btx_selector_int = 0;
+      if (btx_selector === 'Dots') {
+        btx_selector_int = 1;
+      } else if (btx_selector =='Squares') {
+        btx_selector_int = 2;
+      }
     var options = {
         'minutes_off': minutes_off_switch.checked,
         'invert_hours': invert_hours_switch.checked,
         'minutes_color': minutes_ColorPicker.value,
         'hours_color': hours_ColorPicker.value,
         'btx_selector': btx_selector.value,
+        'btx_selector_int': btx_selector_int
     };
 
     // Save for next launch

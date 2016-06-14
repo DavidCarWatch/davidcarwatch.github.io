@@ -99,19 +99,17 @@
       (function() {
        var minutes_off_switch = document.getElementById('minutes_off_checkbox');
        var invert_hours_switch = document.getElementById('invert_hours_checkbox');
-       
-       var btx_selector = document.getElementById('btx_selector');
-
        var minutes_ColorPicker = document.getElementById('minutes_color_picker');
        var hours_ColorPicker = document.getElementById('hours_color_picker');
-
+       var btx_selector = document.getElementById('btx_selector');
+       
        // Load any previously saved configuration, if available
        if(localStorage['minutes_off']) {
        minutes_off_switch.checked = JSON.parse(localStorage['minutes_off']);
        invert_hours_switch.checked = JSON.parse(localStorage['invert_hours']);
-       
        minutes_ColorPicker.value = localStorage['minutes_color'];
        hours_ColorPicker.value = localStorage['hours_color'];
+       btx_selector.value = localStorage['btx_selector'];
        }
        })();
 
@@ -124,11 +122,13 @@
                                         var invert_hours_switch = document.getElementById('invert_hours_checkbox');
                                         var minutes_ColorPicker = document.getElementById('minutes_color_picker');
                                         var hours_ColorPicker = document.getElementById('hours_color_picker');
+                                        var btx_selector = document.getElementById('btx_selector');
 
                                         minutes_off_switch.checked = false;
                                         invert_hours_switch.checked = false;
                                         minutes_ColorPicker.value = '0xFFFFFF';
                                         hours_ColorPicker.value = '0xFFFFFF';
+                                        btx_selector.value = 'Dots';
 
                                         $('.item-color').change();
                                         
@@ -143,12 +143,13 @@
                                         var invert_hours_switch = document.getElementById('invert_hours_checkbox');
                                         var minutes_ColorPicker = document.getElementById('minutes_color_picker');
                                         var hours_ColorPicker = document.getElementById('hours_color_picker');
+                                        var btx_selector = document.getElementById('btx_selector');
 
                                         minutes_off_switch.checked = true;
                                         invert_hours_switch.checked = true;
-                                        
                                         minutes_ColorPicker.value = '0x00FF00';
                                         hours_ColorPicker.value = '0x00FF00';
+                                        btx_selector.value = 'None';
 
                                         $('.item-color').change();
 
@@ -160,13 +161,14 @@
       var invert_hours_switch = document.getElementById('invert_hours_checkbox');
       var minutes_ColorPicker = document.getElementById('minutes_color_picker');
       var hours_ColorPicker = document.getElementById('hours_color_picker');
+      var btx_selector = document.getElementById('btx_selector');
 
     var options = {
         'minutes_off': minutes_off_switch.checked,
         'invert_hours': invert_hours_switch.checked,
-
         'minutes_color': minutes_ColorPicker.value,
         'hours_color': hours_ColorPicker.value,
+        'btx_selector': btx_selector.value,
     };
 
     // Save for next launch

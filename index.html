@@ -37,11 +37,6 @@
                     <input id='minutes_off_checkbox' type='checkbox' class='item-toggle'>
                         </label>
                 
-                <label class='item'>
-                    Invert Hours Digits
-                    <input id='invert_hours_checkbox' type='checkbox' class='item-toggle'>
-                        </label>
-                
                 <label class="item">
                     Hours Digits
                     <select id='hours_mode_selector' name="select-1" dir='rtl' class="item-select">
@@ -107,7 +102,7 @@
         
         (function() {
          var minutes_off_switch = document.getElementById('minutes_off_checkbox');
-         var invert_hours_switch = document.getElementById('invert_hours_checkbox');
+         // var invert_hours_switch = document.getElementById('invert_hours_checkbox');
          var minutes_ColorPicker = document.getElementById('minutes_color_picker');
          var hours_ColorPicker = document.getElementById('hours_color_picker');
          var btx_selector = document.getElementById('btx_selector');
@@ -116,7 +111,7 @@
          // Load any previously saved configuration, if available
          if (localStorage['minutes_off']) {
             minutes_off_switch.checked = JSON.parse(localStorage['minutes_off']);
-            invert_hours_switch.checked = JSON.parse(localStorage['invert_hours']);
+            // invert_hours_switch.checked = JSON.parse(localStorage['invert_hours']);
             minutes_ColorPicker.value = localStorage['minutes_color'];
             hours_ColorPicker.value = localStorage['hours_color'];
             btx_selector.value = localStorage['btx_selector'];
@@ -132,14 +127,14 @@
                                           console.log('clicked Set Sample Colors 1');
                                           
                                           var minutes_off_switch = document.getElementById('minutes_off_checkbox');
-                                          var invert_hours_switch = document.getElementById('invert_hours_checkbox');
+                                          // var invert_hours_switch = document.getElementById('invert_hours_checkbox');
                                           var minutes_ColorPicker = document.getElementById('minutes_color_picker');
                                           var hours_ColorPicker = document.getElementById('hours_color_picker');
                                           var btx_selector = document.getElementById('btx_selector');
                                           var hours_mode_selector = document.getElementById('hours_mode_selector');
 
                                           minutes_off_switch.checked = false;
-                                          invert_hours_switch.checked = false;
+                                          // invert_hours_switch.checked = false;
                                           minutes_ColorPicker.value = '0xFFFFFF';
                                           hours_ColorPicker.value = '0xFFFFFF';
                                           btx_selector.value = 'Checkered';
@@ -157,14 +152,14 @@ colors_Button_2.addEventListener('click',
                                  console.log('clicked Set Sample Colors 2');
                                  
                                  var minutes_off_switch = document.getElementById('minutes_off_checkbox');
-                                 var invert_hours_switch = document.getElementById('invert_hours_checkbox');
+                                 // var invert_hours_switch = document.getElementById('invert_hours_checkbox');
                                  var minutes_ColorPicker = document.getElementById('minutes_color_picker');
                                  var hours_ColorPicker = document.getElementById('hours_color_picker');
                                  var btx_selector = document.getElementById('btx_selector');
                                  var hours_mode_selector = document.getElementById('hours_mode_selector');
 
                                  minutes_off_switch.checked = true;
-                                 invert_hours_switch.checked = true;
+                                 // invert_hours_switch.checked = true;
                                  minutes_ColorPicker.value = '0xffeeab';
                                  hours_ColorPicker.value = '0x5555FF';
                                  btx_selector.value = 'None';
@@ -178,7 +173,7 @@ colors_Button_2.addEventListener('click',
 
  function getConfigData() {
      var minutes_off_switch = document.getElementById('minutes_off_checkbox');
-     var invert_hours_switch = document.getElementById('invert_hours_checkbox');
+     // var invert_hours_switch = document.getElementById('invert_hours_checkbox');
      var minutes_ColorPicker = document.getElementById('minutes_color_picker');
      var hours_ColorPicker = document.getElementById('hours_color_picker');
      var btx_selector = document.getElementById('btx_selector');
@@ -202,7 +197,7 @@ colors_Button_2.addEventListener('click',
 
      var options = {
          'minutes_off': minutes_off_switch.checked,
-         'invert_hours': invert_hours_switch.checked,
+         // 'invert_hours': invert_hours_switch.checked,
          'minutes_color': minutes_ColorPicker.value,
          'hours_color': hours_ColorPicker.value,
          'btx_selector': btx_selector.value,
@@ -213,7 +208,7 @@ colors_Button_2.addEventListener('click',
      
      // Save for next launch
      localStorage['minutes_off'] = options['minutes_off'];
-     localStorage['invert_hours'] = options['invert_hours'];
+     // localStorage['invert_hours'] = options['invert_hours'];
      localStorage['minutes_color'] = options['minutes_color'];
      localStorage['hours_color'] = options['hours_color'];
      localStorage['btx_selector'] = options['btx_selector'];
